@@ -1,8 +1,9 @@
 #include <iostream>
+#include "hotkeys/hotkeys.h"
 #include "format.h"
 
 int main()
 {
-  fmt::print("OverKey!\n");
+    fmt::print(hotkeys::GetKeyName(hotkeys::Keys::SC_E));
     return 0;
 }

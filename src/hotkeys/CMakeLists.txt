@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.1)
 
 # This variable is used to make it easy to copy-paste this entire file for
 # use in another project.

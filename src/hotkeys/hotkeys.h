@@ -1,4 +1,3 @@
-
 #pragma once
 
 // Define preprocessor definitions needed for building DLLs on Windows
@@ -29,7 +28,11 @@
 
 #endif // __linux__
 
+#include "scancodes.hpp"
+#include "sequence.hpp"
+
 namespace hotkeys
 {
-    API std::string HelloWorld();
+  API hotkeys::Sequence Process(hotkeys::Keys key, hotkeys::State state);
+  API std::string GetKeyName(hotkeys::Keys);
 }
