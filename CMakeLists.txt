@@ -1,6 +1,6 @@
 
 # Sets the minimum required version of CMake needed to process this file.
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.1)
 
 # This command sets the name for the entire project.
 project(overkey)
@@ -21,9 +21,9 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${overkey_BIN_DIR})
 
 # Set the C++ standard version to C++11. On older versions of CMake the
 # CMAKE_CXX_FLAGS must be changed instead.
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 if(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} LESS 3.1)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 endif()
 
 # This option allows the users of the project to define if libraries should be

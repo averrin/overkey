@@ -1,10 +1,8 @@
-
 #include <iostream>
+#include "format.h"
 
-using namespace std;
-
-int main() 
+int main()
 {
-    cout << "Hello, World!" << endl;
+  fmt::print("OverKey!\n");
     return 0;
 }

@@ -12,6 +12,7 @@ set(HEADERS
 
 # All source files should go here.
 set(SOURCES
+    ${overkey_LIB_DIR}/format.cc
     main.cpp
 )
 # Add the executable to the build using the headers and sources.

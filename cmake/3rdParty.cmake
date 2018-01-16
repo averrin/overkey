@@ -23,14 +23,14 @@ include(ExternalProject)
 # Set the installation prefix of all third party dependencies. After a build,
 # the libraries, include directories, and executables of all third party
 # projects will be placed in this directory.
-set(THIRD_PARTY_INSTALL_PREFIX ${CMAKE_CURRENT_BINARY_DIR}
+set(THIRD_PARTY_INSTALL_PREFIX ${CMAKE_CURRENT_BINARY_DIR}/lib
     CACHE PATH "Directory to install 3rd party dependencies"
 )
 
 # Add the include/ subdirectory of the third party installation directory
 # to the list of directories to search for header files. This directory will
 # exist after the third party dependencies are built.
-include_directories(${THIRD_PARTY_INSTALL_PREFIX}/include)
+include_directories(${overkey_LIB_DIR}/include)
 
 # Third party dependencies start after this line. They are ordered so that
 # dependencies of parent projects appear first in the file.
