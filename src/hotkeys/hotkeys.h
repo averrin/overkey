@@ -33,6 +33,19 @@
 
 namespace hotkeys
 {
+
+  class KeyManager {
+    public:
+    std::vector<hotkeys::Sequence> sequences;
+    hotkeys::Sequence Process(hotkeys::Keys key, hotkeys::State state);
+    void AddSequence(hotkeys::Sequence seq);
+
+    struct State {
+      std::vector<Stroke> pressedKeys;
+      std::vector<Sequence> suitableSequences;
+    };
+  };
+
   API hotkeys::Sequence Process(hotkeys::Keys key, hotkeys::State state);
   API std::string GetKeyName(hotkeys::Keys);
 }
